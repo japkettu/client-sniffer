@@ -1,0 +1,7 @@
+*.pyc
+*.db
+*.sh
+tags
+test*
+*.log
+
