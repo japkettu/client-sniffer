@@ -1,7 +1,6 @@
 import socket
 import threading
 import client
-import sqlite3 as sqlite
 
 class Sniffer(threading.Thread):
 
