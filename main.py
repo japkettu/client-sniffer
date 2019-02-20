@@ -73,11 +73,13 @@ class TUI:
             curses.nocbreak()
             curses.endwin()
             self.sniffer.stop()
+            self.sniffer.join()
         except:
             curses.echo()
             curses.nocbreak()
             curses.endwin()
             self.sniffer.stop()
+            self.sniffer.join()
             raise
 
     def handleGPSdata(self):

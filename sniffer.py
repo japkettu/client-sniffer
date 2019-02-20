@@ -74,6 +74,7 @@ class Sniffer(threading.Thread):
 
     def stop(self):
         print "Quitting sniffer"
+        self.rawSocket.close()
         self._Thread__stop()
 
     def gen_mac(self,text):
