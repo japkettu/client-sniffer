@@ -29,11 +29,12 @@ class TUI:
        
        # Detect Nokia  N900 power kernel -> N900 does not use gpsd
         if 'power' in platform.release():
-            from gpsN900 import GPS
+        #    from gpsN900 import GPS
             self.OS = "N900"
         else:
-            from gpsGPSD import GPS
+        #    from gpsGPSD import GPS
             self.OS = "LINUX"
+
 
         logging.info("Using: %s", self.OS)
         self.iface = iface
