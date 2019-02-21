@@ -24,12 +24,11 @@ class Sniffer(threading.Thread):
                 #subtype: 4
             if self.pkt[26] == "\x40":
 
-
                 self.ssi_signal = int(self.pkt[22].encode('hex'),16)
                 self.ssi_signal = -(256 - self.ssi_signal)
                 self.length = int(self.pkt[51].encode('hex'), 16)
                 self.ssid = self.pkt[52:52+self.length]
-                if self.ssid.isalnum() == False:
+                if len(self.ssid) > 32:
                     self.ssid = "" 
                 self.client_mac = self.pkt[36:42].encode('hex')
 
