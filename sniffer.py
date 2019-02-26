@@ -42,8 +42,8 @@ class Sniffer(threading.Thread):
                     if self.ssid not in self.clients.get(self.client_mac).ssid_list:
 
                         self.clients.get(self.client_mac).addSSID(self.ssid)
-                    else:
-                        self.clients.get(self.client_mac).updateTime()
+
+                self.clients.get(self.client_mac).updateTime()
 
                 self.clients.get(self.client_mac).updateSignal(self.ssi_signal)
                 self.clients.get(self.client_mac).updateProbeCount()

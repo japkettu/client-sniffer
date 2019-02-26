@@ -16,14 +16,14 @@ class Client:
         self.bestsignal = ssi_signal
         self.bestlat = self.firstlat
         self.bestlon = self.firstlon
-        self.besttime = time.time()
         
         self.ssi_signal = ssi_signal
         self.ssid_list = []
         self.mac = mac
         self.ssid = first_ssid
         self.firsttime = time.time()
-        self.lasttime = self.firsttime
+        self.lasttime = time.time()
+        self.besttime = time.time()
         
         self.client_id = Client.client_id
         Client.client_id += 1

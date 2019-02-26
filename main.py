@@ -173,7 +173,7 @@ class TUI:
         else:
             output += '[GPS] [No GPS data]\n'
         output += '-' * 70 + "\n"
-        output += '%-4s | %-15s | %-15s | %-15s | %s\n' % ("Id", "First location", "Last location", "Best location", "Probes")
+        output += '%-4s | %-15s | %-15s | %-15s | %s\n' % ("Id", "First signal", "Last signal", "Best signal", "Probes")
         output += '-' * 70 + "\n"
 
 
